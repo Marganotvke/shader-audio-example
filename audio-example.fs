@@ -14,6 +14,6 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     for (int i = sb; i < eb; i++){
         avg += abs(iAudio[i]);
     }
-    avg /= eb;
+    avg /= eb-sb;
     fragColor = vec4(avg*far+(1.-avg)*close,1.);
 }
